@@ -15,13 +15,14 @@ header li {
 
 .articles {
     display: flex;
-    flx-wrap: wrap; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
 }
 
 .articles article img { 
     height: 180px;
 }
 
-.article article {
+.articles article {
     width: 30%;
 }
