@@ -4,11 +4,23 @@
     box-sizing: border-box;
 }
 
+header,
+section h2
+section h3 {
+    font-family: 'Bungee', cursive;
+    font-weight: normal;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+}
+
 header {
     padding: 16px 0;
     background-color: #182C61;
     color: #ecf0f1;
 }
+
 
 header nav li {
     display: inline;
@@ -41,6 +53,7 @@ section .container {
 
 .brands-list li {
     display: inline;
+    margin-right: 8px;
 }
 
 section .container {
@@ -48,12 +61,17 @@ section .container {
 }
 
 section {
-    padding: 24px;
+    padding: 28px;
 
 }
 
 section h2 {
     margin-bottom: 16px;
+    color: #182C61;
+}
+
+section {
+    color: #182C61;
 }
 
 section p {
@@ -63,3 +81,16 @@ section p {
 .store-front {
     margin-right:32px;
 }
+
+.social-links img{
+    height: 24px;
+}
+
+#contact .container {
+    display: block;
+}
+
+.contact-methods {
+    display: flex;
+}
+
