@@ -1,0 +1,69 @@
+* { /*reset da pagina */
+    margin: 0px; 
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header { /*escolhe o tipo de fonte e o tamanho */
+    font-family: 'Kablammo', cursive;
+    font-weight: normal;
+    font-size: 150%;
+    letter-spacing: 1px;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+}
+
+header { /*escolhe as cores/tamanho do cabeçalho */
+    padding: 16px;
+    background-color: rgb(7, 235, 71);
+    color:rgb(112, 30, 30);
+}
+
+header nav li { /*formatacao dos links */
+    display: inline;
+    margin-left: 16px;
+    font-size: 18px;
+    font-family: 'Caprasimo', cursive;
+}
+
+header nav li a { /*Sobre a cor do link, tem q ser separado */
+    color: rgb(235, 7, 7);
+    text-decoration: none;
+}
+
+.container { /*configuracao geral container */
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container, /*alinhamento/diagramacao dos itens que tem a section e header na div container */
+section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .container { /*coloca o texto ao lado da figura em cima, retirando o alinhamento centralizado da regra anterior */
+    align-items: flex-start;
+}
+
+section { /*suspiro entre a section e o header */
+    padding: 24px 0;
+}
+
+section { /*cor do texto da section */
+    color: rgb(7, 235, 71);
+}
+
+section p {
+    margin-bottom: 8px;
+}
+
+.store { /*afastamento e tamanho entre a classe store que ta a figura e o texto */
+    margin-right: 32px;
+    width: 35%;
+}
+
