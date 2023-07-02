@@ -1,12 +1,12 @@
 * {
     margin: 0px;
     padding: 0px;
-    box-sizing: 0px;
+    box-sizing: border-box;
 }
 
 header, 
 section h2,
-section h3 
+section h3, 
 from button {
 font-family: 'Bungee', cursive;
 font-weight: normal;
@@ -97,7 +97,7 @@ section p {
 }
 
 .contact-methods {
-    display: flex;
+    display:flex;
     justify-content: space-between;
 }
 
