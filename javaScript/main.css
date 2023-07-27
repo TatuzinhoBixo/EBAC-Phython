@@ -41,11 +41,11 @@ button:hover {
     background-color: #27ae60;
 }
 
-.success-message {
+.success-message {  /*classe do p no html */
     background-color: #27ae60;
     padding: 16px;
     color: #fff;
-    display: none;
+    display: none; /*Remove o contaúdo da tela */
 }
 
 .error-message {
@@ -58,7 +58,7 @@ button:hover {
 
 input.error {
     color: red;
-    boder-color: red;
+    border-color: red;
     outline-color: red;
 }
 
