@@ -1,4 +1,4 @@
-const form = document.getElementById('form-deposito');
+const form = document.getElementById('form-deposito');      //pega o resultado e coloca em uma variavel
 const nomeBeneficiario = document.getElementById('nome-beneficiario');
 let formEvalido = false; 
 
