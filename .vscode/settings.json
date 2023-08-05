@@ -5,5 +5,7 @@
     ],
     "cSpell.words": [
         "sobrenome"
-    ]
+    ],
+    "editor.fontFamily": "Fira Code",
+    "editor.fontSize": 16
 }
