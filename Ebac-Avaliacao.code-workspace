@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "Ebac-Avaliacao",
+			"path": "../Ebac-Avaliacao/Ebac-Avaliacao"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "EBAC-Python"
+	}
+}
