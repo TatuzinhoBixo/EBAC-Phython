@@ -21,7 +21,7 @@ module.exports = function(grunt) {
         watch: {
             less: {
                 files: ['src/styles/**/*.less'],
-                tasks: ['less:development']
+                tasks: ['less:dev']
             },
             html: {
                 files: ['src/index.html'],
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
                 options: {
                     patterns: [
                         {
-                            match: 'ENDERECO_CSS',
+                            match: 'ENDERECO_DO_CSS',
                             replacement: './styles/main.css'
                         },
                         {
@@ -54,7 +54,7 @@ module.exports = function(grunt) {
                 options: {
                     patterns: [
                         {
-                            match: 'ENDERECO_CSS',
+                            match: 'ENDERECO_DO_CSS',
                             replacement: './styles/main.min.css'
                         },
                         {
@@ -66,7 +66,7 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true, flatten: true, 
-                        src: ['prevbuild/index.html'],
+                        src: ['prebuild/index.html'],
                         dest: 'dist/'
                     }
                 ]
@@ -79,11 +79,11 @@ module.exports = function(grunt) {
                     collapseWhitespace: true
                 },
                 files: {
-                    'prevbuild/index.html': 'src/index.html'
+                    'prebuild/index.html': 'src/index.html'
                 }
             }
         },
-        clean: ['prevbuild'],
+        clean: ['prebuild'],
         uglify: {
             target: {
                 files: {
