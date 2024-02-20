@@ -1,5 +1,3 @@
-const { set } = require("grunt");
-
 module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -8,20 +6,20 @@ module.exports = function(grunt) {
                 files: {
                     'dev/styles/main.css': 'src/styles/main.less'
                 }
-            },   
+            },
             production: {
                 options: {
                     compress: true,
                 },
                 files: {
                     'dist/styles/main.min.css': 'src/styles/main.less'
-                }    
-            }
+                }
+            },
         },
         watch: {
             less: {
                 files: ['src/styles/**/*.less'],
-                tasks: ['less:dev']
+                tasks: ['less:development']
             },
             html: {
                 files: ['src/index.html'],
@@ -29,7 +27,7 @@ module.exports = function(grunt) {
             }
         },
         replace: {
-            dev: {
+            dev : {
                 options: {
                     patterns: [
                         {
@@ -42,15 +40,15 @@ module.exports = function(grunt) {
                         }
                     ]
                 },
-                files: [
-                    {
-                        expand: true, flatten: true, 
-                        src: ['src/index.html'],
-                        dest: 'dev/'
-                    }
-                ]
+                files: [ {
+                    expand: true,
+                    flatten: true,
+                    src: ['src/index.html'],
+                    dest: 'dev/'
+
+                }]
             },
-            dist: {
+            dist : {
                 options: {
                     patterns: [
                         {
@@ -59,17 +57,17 @@ module.exports = function(grunt) {
                         },
                         {
                             match: 'ENDERECO_DO_JS',
-                            replacement: './scripts/main.min.js'
+                            replacement: './script//main.min.js'
                         }
                     ]
                 },
-                files: [
-                    {
-                        expand: true, flatten: true, 
-                        src: ['prebuild/index.html'],
-                        dest: 'dist/'
-                    }
-                ]
+                files: [ {
+                    expand: true,
+                    flatten: true,
+                    src: ['prebuild/index.html'],
+                    dest: 'dist/'
+                    
+                }]
             }
         },
         htmlmin: {
@@ -83,15 +81,19 @@ module.exports = function(grunt) {
                 }
             }
         },
-        clean: ['prebuild'],
+        clean: {
+            prebuild: ['prebuild']
+        },
         uglify: {
+            options: {
+                mangle: false
+            },
             target: {
                 files: {
                     'dist/scripts/main.min.js': ['src/scripts/main.js']
                 }
             }
-        }           
-    // Task configuration will be written here
+        }
     })
 
     grunt.loadNpmTasks('grunt-contrib-less');
@@ -100,9 +102,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-
-
-    grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['less:production', 'htmlmin:dist', 'replace:dist', 'clean', 'uglify']);
     
+    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('build', ['less:production', 'htmlmin', 'replace:dist', 'clean', 'uglify']);
 }
