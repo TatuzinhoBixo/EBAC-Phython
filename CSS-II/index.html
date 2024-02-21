@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./smacss/base.css">
+    <link rel="stylesheet" href="./smacss/layout.css"">
+    <link rel="stylesheet" href="./smacss/modulo.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="title">TATU</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">HOME</a>
+                    </li>
+                    <li>
+                        <a href="#">Produto</a>
+                    </li>
+                    <li>
+                        <a href="#">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="accordion">
+            <div class="accordion-header">
+                Nome accordion
+            </header>
+                <p class="accordion-content">
+                    Conteúdo
+                </p>    
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="mensagem mensagem-is-error">
+                <h5 class="mensagem-titulo">Atenção</h5>
+                <p class="mensagem-conteudo">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero assumenda id placeat ad eligendi dolore, voluptatum explicabo quia. Suscipit quos amet adipisci distinctio non quibusdam iste assumenda facilis tempora ad.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const accordion = document.querySelectorAll('.accordion-header');
+        for (let i = 0; i < accordion.length; i++) {
+            accordion[i].addEventListener('click', function(evento) {
+                evento.target.parentNode.querySelector('.accordion-content').classList.add
+                even
+            })
+        }
+    </script>
+</body>
+</html>
